@@ -31,6 +31,8 @@ public class FrameKeyboardViewClickListenerTest {
         Mockito.verifyZeroInteractions(keyboardActionListener);
         View view = new View(getApplicationContext());
         view.setId(R.id.quick_keys_popup_close);
+        view.setId(R.id.quick_keys_popup_close_liz);
+        view.setId(R.id.quick_keys_popup_close_liz_2);
         listener.onClick(view);
         Mockito.verify(keyboardActionListener).onKey(KeyCodes.CANCEL, null, 0, null, true);
         Mockito.verifyNoMoreInteractions(keyboardActionListener);

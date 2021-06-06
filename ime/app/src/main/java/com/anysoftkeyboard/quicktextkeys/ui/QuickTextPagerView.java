@@ -34,8 +34,8 @@ public class QuickTextPagerView extends LinearLayout implements InputViewActions
     private ColorStateList mTabTitleTextColor;
     private Drawable mCloseKeyboardIcon;
     private Drawable mBackspaceIcon;
-    private Drawable mSettingsIcon;
-    private Drawable mMediaInsertionDrawable;
+   /* private Drawable mSettingsIcon;
+    private Drawable mMediaInsertionDrawable;*/
     private int mBottomPadding;
     private QuickKeyHistoryRecords mQuickKeyHistoryRecords;
     private DefaultSkinTonePrefTracker mDefaultSkinTonePrefTracker;
@@ -93,11 +93,12 @@ public class QuickTextPagerView extends LinearLayout implements InputViewActions
         mTabTitleTextColor = tabTextColor;
         mCloseKeyboardIcon = closeKeyboardIcon;
         mBackspaceIcon = backspaceIcon;
-        mSettingsIcon = settingsIcon;
-        mMediaInsertionDrawable = mediaInsertionDrawable;
+        /*mSettingsIcon = settingsIcon;
+        mMediaInsertionDrawable = mediaInsertionDrawable;*/
         mBottomPadding = bottomPadding;
-        findViewById(R.id.quick_keys_popup_quick_keys_insert_media)
-                .setVisibility(supportedMediaTypes.isEmpty() ? View.GONE : VISIBLE);
+        //LIZ REMOVED
+        /*findViewById(R.id.quick_keys_popup_quick_keys_insert_media)
+                .setVisibility(supportedMediaTypes.isEmpty() ? View.GONE : VISIBLE);*/
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
             setBackground(keyboardDrawable);
         } else {
@@ -159,10 +160,11 @@ public class QuickTextPagerView extends LinearLayout implements InputViewActions
                 .setImageDrawable(mCloseKeyboardIcon);
         ((ImageView) findViewById(R.id.quick_keys_popup_backspace))
                 .setImageDrawable(mBackspaceIcon);
-        ((ImageView) findViewById(R.id.quick_keys_popup_quick_keys_insert_media))
+        //LIZ REMOVED
+        /*((ImageView) findViewById(R.id.quick_keys_popup_quick_keys_insert_media))
                 .setImageDrawable(mMediaInsertionDrawable);
         ((ImageView) findViewById(R.id.quick_keys_popup_quick_keys_settings))
-                .setImageDrawable(mSettingsIcon);
+                .setImageDrawable(mSettingsIcon);*/
         final View actionsLayout = findViewById(R.id.quick_text_actions_layout);
         actionsLayout.setPadding(
                 actionsLayout.getPaddingLeft(),

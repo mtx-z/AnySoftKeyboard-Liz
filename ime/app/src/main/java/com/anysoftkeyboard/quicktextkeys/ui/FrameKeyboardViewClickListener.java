@@ -20,11 +20,15 @@ import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.quick_keys_popup_close:
+            case R.id.quick_keys_popup_close_liz:
+            case R.id.quick_keys_popup_close_liz_2:
                 mKeyboardActionListener.onKey(KeyCodes.CANCEL, null, 0, null, true);
                 break;
             case R.id.quick_keys_popup_backspace:
                 mKeyboardActionListener.onKey(KeyCodes.DELETE, null, 0, null, true);
                 break;
+            /*
+            LIZ removed
             case R.id.quick_keys_popup_quick_keys_insert_media:
                 mKeyboardActionListener.onKey(KeyCodes.IMAGE_MEDIA_POPUP, null, 0, null, true);
                 break;
@@ -42,7 +46,7 @@ import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
                 v.getContext().startActivity(startSettings);
                 // and closing keyboard
                 mKeyboardActionListener.onKey(KeyCodes.CANCEL, null, 0, null, true);
-                break;
+                break;*/
             default:
                 throw new IllegalArgumentException(
                         "Failed to handle view id "
@@ -53,9 +57,12 @@ import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
 
     void registerOnViews(View rootView) {
         rootView.findViewById(R.id.quick_keys_popup_close).setOnClickListener(this);
+        rootView.findViewById(R.id.quick_keys_popup_close_liz).setOnClickListener(this);
+        rootView.findViewById(R.id.quick_keys_popup_close_liz_2).setOnClickListener(this);
         rootView.findViewById(R.id.quick_keys_popup_backspace).setOnClickListener(this);
-        rootView.findViewById(R.id.quick_keys_popup_quick_keys_settings).setOnClickListener(this);
+        //LIZ removed
+        /*rootView.findViewById(R.id.quick_keys_popup_quick_keys_settings).setOnClickListener(this);
         rootView.findViewById(R.id.quick_keys_popup_quick_keys_insert_media)
-                .setOnClickListener(this);
+                .setOnClickListener(this);*/
     }
 }
