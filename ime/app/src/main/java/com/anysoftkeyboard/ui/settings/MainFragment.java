@@ -248,6 +248,29 @@ public class MainFragment extends Fragment {
                     }
                 };
         setupLink(getView(), R.id.ask_social_link, socialLink, false);
+
+        //LIZ UPDATES TEST
+        /*ClickableSpan lizRestoreLink =
+                new ClickableSpan() {
+                    @Override
+                    public void onClick(View widget) {
+                        try {
+                            ((MainSettingsActivity) getActivity())
+                                    .startPermissionsRequest(
+                                            new MainFragment.StoragePermissionRequest(this, 1));
+                            } catch (Exception weirdException) {
+                            // https://github.com/AnySoftKeyboard/AnySoftKeyboard/issues/516
+                            // this means that there is nothing on the device
+                            // that can handle Intent.ACTION_VIEW with "https" schema..
+                            // silently swallowing it
+                            Logger.w(
+                                    TAG,
+                                    "Can not open '%' since there is nothing on the device that can handle it.",
+                                    weirdException.getMessage());
+                        }
+                    }
+                };
+        setupLink(getView(), R.id.restore_prefs_liz_link, socialLink, false);*/
     }
 
     @Override

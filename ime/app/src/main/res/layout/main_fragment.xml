@@ -106,6 +106,32 @@
                 android:textSize="@dimen/font_size_sub_title" />
         </androidx.cardview.widget.CardView>
 
+        <!-- LIZ todo: make a link that open the "Restore" settings, same as we clicked in the menu. Not succeeded yet.-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/liz_main_fragment_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/restore_prefs_liz_link"
+                android:icon="@android:drawable/ic_menu_upload"
+                android:title="@string/word_editor_action_restore_words"
+                style="@style/Ask.Text.Normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:drawableStart="@drawable/ic_not_configured_animation"
+                android:drawableLeft="@drawable/ic_not_configured_animation"
+                android:drawablePadding="6dp"
+                android:padding="8dp"
+                android:text="Pour restaurer la configuration: cliquez sur le menu 3 points en haut à droite de cet écran, puis sur le bouton 'Restore'"
+                android:textColor="?android:textColorSecondary"
+                android:textSize="@dimen/font_size_sub_title" />
+
+        </androidx.cardview.widget.CardView>
+
         <androidx.cardview.widget.CardView
             android:id="@+id/change_log_fragment"
             android:layout_width="match_parent"

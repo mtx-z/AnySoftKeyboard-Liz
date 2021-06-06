@@ -30,9 +30,8 @@
     <string name="version_text">Version\u0020<xliff:g id="version_name">%s</xliff:g>,\u0020version-code <xliff:g id="version_number">%d</xliff:g>.</string>
     <string name="quick_text_tab_title_template"><xliff:g id="first_key">%s</xliff:g>\u0020<xliff:g id="name">%s</xliff:g></string>
 
-    <string name="beta_tester_message">This is a\u0020<b>testing build</b>. It may contain bugs, and it may be non-backward
-        compatible!\nIt may also include\u0020&#x1f409;\u0020<i>DRAGONS</i>!\u0020And they tend to eat features.\nPlease, report\u0020<b>any problem</b>
-        you encounter at http://s.evendanan.net/ask_issues.\n\nThank you for testing a development build.\u0020&#x1f409;
+    <string name="beta_tester_message">This is a custom <b>Liz</b> keyboard build based on open source AnySoftKeyboard v1.11-r1<br/>
+        The purpose of this build is to have a keyboard hat will be used from "Kiosk mode" used android devices.
     </string>
     <string name="about_copyright_text">Copyright\u0020©\u0020<xliff:g id="year">%d</xliff:g>\u0020Menny Even-Danan</string>
     <string name="main_site_url">https://anysoftkeyboard.github.io/</string>

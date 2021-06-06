@@ -11,12 +11,23 @@
 
     <string name="menu_about_item">About</string>
 
-    <string name="how_to_pointer_title">Welcome to AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Liz keyboard</string>
 
-    <string name="change_log_card_version_title_template">\u0020\u0020Latest changes for v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
+    <string name="change_log_card_version_title_template">\u0020\u0020AnySoftKeyboard-Liz v0.1\u0020\u0020</string>
+    <string name="liz_home_message_3">
+        - configurations fixes for Windows build success
+        - remove access to settings from emoji keybiard right toolbar<br/>
+        - add (WIP) additionnal buttons on the emoji keyboard right sidebar to clsoe emoji keyboard (test with full text and icon)<br/>
+        - remove access to settings popup on long enter click<br/>
+        - add voice input button on the kbd_bottom_row_aosp
+    </string>
+
+    <string name="liz_home_message_2">\u0020\u0020Liz fork from v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
+
+    <string name="liz_home_message_1">\u0020\u0020Latest changes for v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">More:\u0020<xliff:g id="url">%s</xliff:g></string>
-    
+
     <string name="notification_text_testers">This is a beta version. Use with caution!</string>
     <string name="testers_version">Testers build!</string>
 
@@ -32,7 +43,7 @@
 
     <!-- welcome -->
     <!-- changelog -->
-    <string name="changelog">Change Log</string>
+    <string name="changelog">Liz build change log</string>
     <string name="search_market_for_addons">Search for add-ons</string>
     <string name="search_market_for_keyboard_addons">Get more keyboards at the app store</string>
     <string name="search_market_for_quick_key_addons">Get more <i>Quick-Text</i> add-ons at the app store…</string>
@@ -185,7 +196,7 @@
     <string name="backword_support_off_summary">Shifted Backspace will delete the last character</string>
 
 
-    
+
     <string name="swipe_up_action">Swipe up</string>
     <string name="swipe_up_action_summary">Define the swipe up gesture action. Currently, %s
     </string>
@@ -450,8 +461,8 @@
     <string name="quick_fix">Quick fixes and abbreviations</string>
     <string name="quick_fix_summary">Corrects commonly typed mistakes, and expands abbreviations</string>
     <string name="quick_fix_secon_disabled">…on first language only</string>
-    <string name="quick_fix_secon_disabled_summ_on">Quick fixes and abbreviations will work only on current layout language</string> 
-    <string name="quick_fix_secon_disabled_summ_off">Quick fixes and abbreviations will work on every language 
+    <string name="quick_fix_secon_disabled_summ_on">Quick fixes and abbreviations will work only on current layout language</string>
+    <string name="quick_fix_secon_disabled_summ_off">Quick fixes and abbreviations will work on every language
                   checked in override default dictionary</string>
 
     <string name="allow_suggestions_restart">Suggestions restart</string>
@@ -572,7 +583,7 @@
 
     <string name="select_keyboard_popup_title">Select keyboard</string>
     <!-- dictionaries -->
-    
+
 
     <string name="simley_key_name">Smiley key</string>
     <string name="short_smiley_key_name">Shorter Smiley key</string>
@@ -818,7 +829,7 @@
     <string name="next_words_statistics_no_usage">No usage yet. Type a bit more.</string>
     <string name="clipboard_is_empty_toast">Clipboard is empty, there is nothing to paste.</string>
     <string name="clipboard_copy_done_toast">Selected text copied to clipboard.</string>
-    
+
     <string name="clipboard_paste_entries_title">Pick text to paste</string>
     <string name="next_word_prefs_clear_data">Clear next-word data</string>
     <string name="next_word_prefs_clear_data_summary">This is irreversible. All your typing history will be cleared.</string>
@@ -869,7 +880,7 @@
     <string name="no_internet_fields_specific_layout">None</string>
     <string name="bottom_nav_home">Hello</string>
     <string name="setup_wizard_welcome_title">Welcome!</string>
-    <string name="setup_wizard_welcome_sub_title">Liz anySoftKeyboard v0.1-en
+    <string name="setup_wizard_welcome_sub_title">Liz anySoftKeyboard v0.1
     </string>
     <string name="setup_wizard_welcome_info">As with any other Android keyboard, you are required to
         enable AnySoftKeyboard in Android Settings pages. This is required by Android to ensure that

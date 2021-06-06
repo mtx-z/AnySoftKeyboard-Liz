@@ -12,6 +12,20 @@ public class VersionChangeLogs {
 
         log.add(
                 new VersionChangeLog(
+                        0,
+                        1,
+                        "liz",
+                        Uri.parse(
+                                "https://github.com/mtx-z/AnySoftKeyboard-Liz"),
+                        "remove access to settings from emoji keyboard right toolbar.",
+                        "add (WIP) additionnal buttons on the emoji keyboard right sidebar to clsoe emoji keyboard (test with full text and icon).",
+                        "remove access to settings popup on long enter click.",
+                        "add voice input button on the kbd_bottom_row_aosp.",
+                        "Configurations fixes for Windows build",
+                        "Liz fork from 1.11-r1"));
+
+        log.add(
+                new VersionChangeLog(
                         1,
                         11,
                         "r1",

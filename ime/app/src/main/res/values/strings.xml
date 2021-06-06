@@ -11,9 +11,20 @@
 
     <string name="menu_about_item">About</string>
 
-    <string name="how_to_pointer_title">Welcome to AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Liz keyboard</string>
 
-    <string name="change_log_card_version_title_template">\u0020\u0020Latest changes for v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
+    <string name="change_log_card_version_title_template">\u0020\u0020AnySoftKeyboard-Liz v0.1\u0020\u0020</string>
+    <string name="liz_home_message_3">
+        - configurations fixes for Windows build success
+        - remove access to settings from emoji keybiard right toolbar<br/>
+        - add (WIP) additionnal buttons on the emoji keyboard right sidebar to clsoe emoji keyboard (test with full text and icon)<br/>
+        - remove access to settings popup on long enter click<br/>
+        - add voice input button on the kbd_bottom_row_aosp
+    </string>
+
+    <string name="liz_home_message_2">\u0020\u0020Liz fork from v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
+
+    <string name="liz_home_message_1">\u0020\u0020Latest changes for v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">More:\u0020<xliff:g id="url">%s</xliff:g></string>
     
