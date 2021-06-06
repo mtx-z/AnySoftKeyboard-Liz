@@ -1,3 +1,24 @@
+AnySoftKeyboard-Liz&nbsp;[![Generic badge](https://img.shields.io/badge/version-0.1-blue.svg)](https://github.com/mtx-z/AnySoftKeyboard-Liz/)&nbsp;![Maintaner](https://img.shields.io/badge/maintainer-mtxz-red)&nbsp;[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)&nbsp;[![Generic badge](https://img.shields.io/badge/AnySoftKeyboard-v1.10_r4-blue.svg)](https://github.com/AnySoftKeyboard/AnySoftKeyboard/releases)
+====================
+
+|X|Task|Priority
+|---|---|--:|
+|:white_check_mark:|Make build works on Windows|1|
+|:white_check_mark:|remove access to settings from emoji keybiard right toolbar|1|
+|:white_check_mark:|add (WIP) additionnal buttons on the emoji keyboard right sidebar to clsoe emoji keyboard (test with full text and icon)|1|
+|:white_check_mark:|remove access to add media button on emoji keyboard right sidebar|1|
+|:white_check_mark:|remove access to settings popup on long enter click|1|
+|:red_circle:|Integrate [french keyboard](https://github.com/AnySoftKeyboard/AnySoftKeyboard/blob/master/addons/languages/PACKS.md) into main apk (add it, or replace the default one) - so we have 1 APL to install, and use of restore settings feature|2|
+|:red_circle:|Change color of a single key in the bottom bar (we use the "AOSP styled" bottom bar, and edit it (already started editing) - we want to edit the Voice Input key, added in the AOSP styled bottom bar|1|
+|:red_circle:|Remove emoji keyboard history tab|1|
+|:red_circle:|Close emoji (and symbol) keyboard after first input|2|
+|:red_circle:|On symbol keyboard, replace number top bar (as already enabled globally, so it makes double top number row on symbol keyboard) by selected emojis (or remove top bar if emoji not possible)|3|
+|:red_circle:|Add "restore settings" button on app homepage (same behavior as clicking in the top right menu, and hitting "restore" button|3|
+|:red_circle:|See if we can change the default import file path to a custom one (the one that will be used when device provisionning add the file)|3|
+<br/>
+
+Based on:<br/>
+
 AnySoftKeyboard&nbsp;[![Latest release](https://img.shields.io/github/release/AnySoftKeyboard/AnySoftKeyboard.svg)](https://github.com/AnySoftKeyboard/AnySoftKeyboard/releases)
 ====================
 Discussions can be found on&nbsp;[💬&nbsp;GitHub](https://github.com/AnySoftKeyboard/AnySoftKeyboard/discussions)<br/>
