@@ -34,6 +34,7 @@ apply from: "${rootDir}/gradle/android_general.gradle"
 android {
     defaultConfig {
         applicationId calculateApplicationId(project)
+        multiDexEnabled true
     }
 
     applicationVariants.configureEach { variant ->

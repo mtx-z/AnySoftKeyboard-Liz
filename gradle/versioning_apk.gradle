@@ -14,4 +14,5 @@ android.defaultConfig {
     versionName versioningProject.autoVersioning.versionData.versionName
 
     println "Building ${project.path} ${versionName} (or ${project.version}), code ${versionCode}."
+    multiDexEnabled true
 }
