@@ -154,12 +154,12 @@ public class MainFragment extends Fragment {
         mDemoAnyKeyboardView = view.findViewById(R.id.demo_keyboard_view);
         setHasOptionsMenu(true);
 
-        //DONE: setting up the "Restore Previous Settings" button on the homepage
+        // DONE: setting up the "Restore Previous Settings" button on the homepage
         Button restoreSettingsBtn = view.findViewById(R.id.restore_previous_settings_btn);
         restoreSettingsBtn.setOnClickListener(this::handleRestoreSettingsBtnClick);
     }
 
-    // Done: This method handles "Restore Previous Settings" button click
+    // DONE: This method handles "Restore Previous Settings" button click
     private void handleRestoreSettingsBtnClick(View view) {
         ((MainSettingsActivity) getActivity())
                 .startPermissionsRequest(
