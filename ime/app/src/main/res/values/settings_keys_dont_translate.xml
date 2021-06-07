@@ -143,7 +143,7 @@
     <string-array name="settings_key_initial_quick_text_tab_names">
         <item>@string/initial_quick_text_tab_always_first_tab</item>
         <item>@string/initial_quick_text_tab_last_used_tab</item>
-        <item>@string/initial_quick_text_tab_history_tab</item>
+        <!--<item>@string/initial_quick_text_tab_history_tab</item>--> <!-- DONE this is how I removed "Start with history group" option from initial group settings of emoji panel -->
     </string-array>
 
     <string name="settings_key_default_emoji_skin_tone">settings_key_default_emoji_skin_tone</string>

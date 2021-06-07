@@ -118,7 +118,9 @@ public class QuickTextPagerView extends LinearLayout implements InputViewActions
         // always starting with Recent
         final HistoryQuickTextKey historyQuickTextKey =
                 new HistoryQuickTextKey(context, mQuickKeyHistoryRecords);
-        list.add(historyQuickTextKey);
+
+//        list.add(historyQuickTextKey); DONE: this how I removed history tab from emoji panel
+
         // then all the rest
         list.addAll(AnyApplication.getQuickTextKeyFactory(context).getEnabledAddOns());
 
