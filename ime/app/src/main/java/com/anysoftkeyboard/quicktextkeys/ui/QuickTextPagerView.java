@@ -147,7 +147,7 @@ public class QuickTextPagerView extends LinearLayout implements InputViewActions
                         quickTextUserPrefs.setLastSelectedAddOnId(selectedKey.getId());
                     }
                 };
-        int startPageIndex = quickTextUserPrefs.getStartPageIndex(list);
+        int startPageIndex = quickTextUserPrefs.getStartPageIndex(list) - 1; // -1 so that now History is gone, starting page should be "emoticons" not "people"
         setupSlidingTab(
                 this,
                 mTabTitleTextSize,
