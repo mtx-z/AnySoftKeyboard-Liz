@@ -9,27 +9,14 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.provider.Settings;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.core.util.Pair;
 import androidx.fragment.app.FragmentActivity;
 
-import com.anysoftkeyboard.prefs.GlobalPrefsBackup;
 import com.anysoftkeyboard.ui.settings.BasicAnyActivity;
 import com.menny.android.anysoftkeyboard.R;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.util.List;
-
-import io.reactivex.Observable;
-import io.reactivex.disposables.Disposable;
 
 public class WizardPageEnableKeyboardFragment extends WizardPageBaseFragment {
 
@@ -129,72 +116,7 @@ public class WizardPageEnableKeyboardFragment extends WizardPageBaseFragment {
         view.findViewById(R.id.go_to_language_settings_action)
                 .setOnClickListener(goToDeviceLanguageSettings);
         mStateIcon.setOnClickListener(goToDeviceLanguageSettings);
-
-
-        // DONE: I am restoring data from file here
-        Log.v("FahadQaziTest", "restoring settings");
-        setDefaultSettings();
     }
-
-    private void setDefaultSettings() {
-        InputStream inputStream = null;
-        try {
-            List<GlobalPrefsBackup.ProviderDetails> supportedProviders;
-            Boolean[] checked;
-
-            supportedProviders = GlobalPrefsBackup.getAllPrefsProviders(getContext());
-            final CharSequence[] providersTitles = new CharSequence[supportedProviders.size()];
-            final boolean[] initialChecked = new boolean[supportedProviders.size()];
-            checked = new Boolean[supportedProviders.size()];
-
-            for (int providerIndex = 0; providerIndex < supportedProviders.size(); providerIndex++) {
-                // starting with everything checked
-                checked[providerIndex] = initialChecked[providerIndex] = true;
-                providersTitles[providerIndex] =
-                        getText(supportedProviders.get(providerIndex).providerTitle);
-            }
-
-
-            inputStream = getContext().getAssets().open("Liz-AnySoftKeyboardPrefs.xml");
-            File file = createFileFromInputStream(inputStream);
-            GlobalPrefsBackup.updateCustomFilename(file);
-            Observable<GlobalPrefsBackup.ProviderDetails> result = GlobalPrefsBackup.restore(new Pair<>(supportedProviders, checked));
-            Disposable d = result.subscribe(providerDetails -> {
-                Log.v("FahadQaziTest", "restore result: " + providerDetails + ", filename: " + file.getName());
-            }, e -> {
-                Log.v("FahadQaziTest", "error: " + e);
-            });
-
-            Log.v("FahadQaziTest", d.toString());
-
-        } catch (IOException e) {
-            Log.e("FahadQaziTest", e.getMessage());
-        }
-    }
-
-    private File createFileFromInputStream(InputStream inputStream) {
-
-        try{
-            File f = new File(getContext().getCacheDir() + "/Liz-AnySoftKeyboardPrefs.xml");
-            OutputStream outputStream = new FileOutputStream(f);
-            byte[] buffer = new byte[1024];
-            int length = 0;
-
-            while((length=inputStream.read(buffer)) > 0) {
-                outputStream.write(buffer,0,length);
-            }
-
-            outputStream.close();
-            inputStream.close();
-
-            return f;
-        }catch (IOException e) {
-            //Logging exception
-        }
-
-        return null;
-    }
-
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
