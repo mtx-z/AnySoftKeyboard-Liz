@@ -13,7 +13,7 @@ AnySoftKeyboard-Liz&nbsp;[![Generic badge](https://img.shields.io/badge/version-
 |:white_check_mark:|Remove emoji keyboard history tab|1|
 |:red_circle:|Close emoji (and symbol) keyboard after first input|2|
 |:red_circle:|On symbol keyboard, replace number top bar (as already enabled globally, so it makes double top number row on symbol keyboard) by selected emojis (or remove top bar if emoji not possible)|3|
-|:red_circle:|Add "restore settings" button on app homepage (same behavior as clicking in the top right menu, and hitting "restore" button|3|
+|:white_check_mark:|Add "restore settings" button on app homepage (same behavior as clicking in the top right menu, and hitting "restore" button|3|
 |:red_circle:|See if we can change the default import file path to a custom one (the one that will be used when device provisionning add the file) - (even better: auto import a setting file on first launch for a hardcoded given path)|3|
 <br/>
 
