@@ -8,7 +8,7 @@ AnySoftKeyboard-Liz&nbsp;[![Generic badge](https://img.shields.io/badge/version-
 |:white_check_mark:|add (WIP) additionnal buttons on the emoji keyboard right sidebar to clsoe emoji keyboard (test with full text and icon)|1|
 |:white_check_mark:|remove access to add media button on emoji keyboard right sidebar|1|
 |:white_check_mark:|remove access to settings popup on long enter click|1|
-|:red_circle:|Integrate [french keyboard](https://github.com/AnySoftKeyboard/AnySoftKeyboard/blob/master/addons/languages/PACKS.md) into main apk (add it, or replace the default one) - so we have 1 APL to install, and use of restore settings feature|2|
+|:white_check_mark:|Integrate [french keyboard](https://github.com/AnySoftKeyboard/AnySoftKeyboard/blob/master/addons/languages/PACKS.md) into main apk (add it, or replace the default one) - so we have 1 APL to install, and use of restore settings feature|2|
 |:red_circle:|Change color of a single key in the bottom bar (we use the "AOSP styled" bottom bar, and edit it (already started editing) - we want to edit the Voice Input key, added in the AOSP styled bottom bar|1|
 |:white_check_mark:|Remove emoji keyboard history tab|1|
 |:red_circle:|Close emoji (and symbol) keyboard after first input|2|
