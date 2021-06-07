@@ -23,6 +23,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -152,6 +153,17 @@ public class MainFragment extends Fragment {
         testerSignUp.setVisibility(mTestingBuild ? View.GONE : View.VISIBLE);
         mDemoAnyKeyboardView = view.findViewById(R.id.demo_keyboard_view);
         setHasOptionsMenu(true);
+
+        //DONE: setting up the "Restore Previous Settings" button on the homepage
+        Button restoreSettingsBtn = view.findViewById(R.id.restore_previous_settings_btn);
+        restoreSettingsBtn.setOnClickListener(this::handleRestoreSettingsBtnClick);
+    }
+
+    // Done: This method handles "Restore Previous Settings" button click
+    private void handleRestoreSettingsBtnClick(View view) {
+        ((MainSettingsActivity) getActivity())
+                .startPermissionsRequest(
+                        new MainFragment.StoragePermissionRequest(this, R.id.restore_prefs));
     }
 
     @Override

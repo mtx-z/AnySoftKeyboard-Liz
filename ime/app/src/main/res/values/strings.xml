@@ -744,6 +744,7 @@
     <string name="word_editor_action_add_word">Add word</string>
     <string name="word_editor_action_backup_words">Backup</string>
     <string name="word_editor_action_restore_words">Restore</string>
+    <string name="homepage_restore_previous_settings">Restore previous settings</string> <!-- Done: added a label for the restore button in the homepage -->
     <string name="click_to_add_new_word">Click to add a new word</string>
     <string name="enter_word_hint">Type the new word here</string>
     <string name="enter_abbreviation_hint">Abbreviation</string>

@@ -59,6 +59,14 @@
 
         </FrameLayout>
 
+        <!-- DONE: "Restore Settings" button on homepage -->
+        <Button
+            android:id="@+id/restore_previous_settings_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/homepage_restore_previous_settings"
+            android:layout_gravity="center"/>
+
         <!-- this box will be should shown
          only if the build type is not release -->
         <androidx.cardview.widget.CardView
