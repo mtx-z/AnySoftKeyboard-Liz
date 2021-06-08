@@ -28,6 +28,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Paint.Align;
 import android.graphics.Paint.FontMetrics;
+import android.graphics.PorterDuff;
 import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
@@ -41,6 +42,7 @@ import android.text.StaticLayout;
 import android.text.TextPaint;
 import android.text.TextUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.util.SparseArray;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -52,6 +54,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.collection.ArrayMap;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.MotionEventCompat;
 import androidx.core.view.ViewCompat;
 import com.anysoftkeyboard.addons.AddOn;
@@ -1251,7 +1254,10 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
                         ? mThemeHintLabelVAlign
                         : mCustomHintGravity & Gravity.VERTICAL_GRAVITY_MASK;
 
-        final Drawable keyBackground = themeResourcesHolder.getKeyBackground();
+        Drawable keyBackground = themeResourcesHolder.getKeyBackground();
+        Drawable tempBackground = keyBackground;
+        Drawable voiceInputKeyBackground = ContextCompat.getDrawable(getContext(), R.drawable.voice_key_background);
+
         final Rect clipRegion = mClipRegion;
         final int kbdPaddingLeft = getPaddingLeft();
         final int kbdPaddingTop = getPaddingTop();
@@ -1273,6 +1279,14 @@ public class AnyKeyboardViewBase extends View implements InputViewBinder, Pointe
         for (Keyboard.Key keyBase : keys) {
             final AnyKey key = (AnyKey) keyBase;
             final boolean keyIsSpace = isSpaceKey(key);
+
+            // DONE: this is where I am changing background color of voice input key
+            if (key.getPrimaryCode() == KeyCodes.VOICE_INPUT) {
+                //keyBackground = themeResourcesHolder.getKeyBackground();
+                keyBackground = voiceInputKeyBackground;
+            } else {
+                keyBackground = tempBackground;
+            }
 
             if (drawSingleKey && (invalidKey != key)) {
                 continue;
