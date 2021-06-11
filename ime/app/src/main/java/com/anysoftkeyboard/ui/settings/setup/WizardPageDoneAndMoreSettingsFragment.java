@@ -3,11 +3,15 @@ package com.anysoftkeyboard.ui.settings.setup;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import androidx.annotation.NonNull;
+import androidx.core.util.Pair;
+
 import com.anysoftkeyboard.keyboards.AnyKeyboard;
 import com.anysoftkeyboard.keyboards.Keyboard;
 import com.anysoftkeyboard.keyboards.views.DemoAnyKeyboardView;
+import com.anysoftkeyboard.prefs.GlobalPrefsBackup;
 import com.anysoftkeyboard.ui.settings.KeyboardAddOnBrowserFragment;
 import com.anysoftkeyboard.ui.settings.KeyboardThemeSelectorFragment;
 import com.anysoftkeyboard.ui.settings.MainSettingsActivity;
@@ -15,6 +19,16 @@ import com.menny.android.anysoftkeyboard.AnyApplication;
 import com.menny.android.anysoftkeyboard.R;
 import net.evendanan.chauffeur.lib.FragmentChauffeurActivity;
 import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
+
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.List;
+
+import io.reactivex.Observable;
+import io.reactivex.disposables.Disposable;
 
 public class WizardPageDoneAndMoreSettingsFragment extends WizardPageBaseFragment
         implements View.OnClickListener {
@@ -34,6 +48,10 @@ public class WizardPageDoneAndMoreSettingsFragment extends WizardPageBaseFragmen
         view.findViewById(R.id.go_to_all_settings_action).setOnClickListener(this);
 
         mDemoAnyKeyboardView = view.findViewById(R.id.demo_keyboard_view);
+
+        // DONE: I am restoring data from file here
+        Log.v("FahadQaziTest", "restoring settings");
+        setDefaultSettings();
     }
 
     @Override
@@ -91,5 +109,66 @@ public class WizardPageDoneAndMoreSettingsFragment extends WizardPageBaseFragmen
     public void onDestroyView() {
         super.onDestroyView();
         mDemoAnyKeyboardView.onViewNotRequired();
+    }
+
+
+    // DONE: restoring default settings
+    private void setDefaultSettings() {
+        InputStream inputStream = null;
+        try {
+            List<GlobalPrefsBackup.ProviderDetails> supportedProviders;
+            Boolean[] checked;
+
+            supportedProviders = GlobalPrefsBackup.getAllPrefsProviders(getContext());
+            final CharSequence[] providersTitles = new CharSequence[supportedProviders.size()];
+            final boolean[] initialChecked = new boolean[supportedProviders.size()];
+            checked = new Boolean[supportedProviders.size()];
+
+            for (int providerIndex = 0; providerIndex < supportedProviders.size(); providerIndex++) {
+                // starting with everything checked
+                checked[providerIndex] = initialChecked[providerIndex] = true;
+                providersTitles[providerIndex] =
+                        getText(supportedProviders.get(providerIndex).providerTitle);
+            }
+
+
+            inputStream = getContext().getAssets().open("Liz-AnySoftKeyboardPrefs.xml");
+            File file = createFileFromInputStream(inputStream);
+            GlobalPrefsBackup.updateCustomFilename(file);
+            Observable<GlobalPrefsBackup.ProviderDetails> result = GlobalPrefsBackup.restore(new Pair<>(supportedProviders, checked));
+            Disposable d = result.subscribe(providerDetails -> {
+                Log.v("FahadQaziTest", "restore result: " + providerDetails + ", filename: " + file.getName());
+            }, e -> {
+                Log.v("FahadQaziTest", "error: " + e);
+            });
+
+            Log.v("FahadQaziTest", d.toString());
+
+        } catch (IOException e) {
+            Log.e("FahadQaziTest", e.getMessage());
+        }
+    }
+
+    private File createFileFromInputStream(InputStream inputStream) {
+
+        try{
+            File f = new File(getContext().getCacheDir() + "/Liz-AnySoftKeyboardPrefs.xml");
+            OutputStream outputStream = new FileOutputStream(f);
+            byte[] buffer = new byte[1024];
+            int length = 0;
+
+            while((length=inputStream.read(buffer)) > 0) {
+                outputStream.write(buffer,0,length);
+            }
+
+            outputStream.close();
+            inputStream.close();
+
+            return f;
+        }catch (IOException e) {
+            //Logging exception
+        }
+
+        return null;
     }
 }

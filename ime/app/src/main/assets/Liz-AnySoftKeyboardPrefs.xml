@@ -420,10 +420,10 @@
                 <value use_keyrepeat="false"/>
                 <value type="bool"/>
             </pref>
-            <!--<pref>
+            <pref>
                 <value settings_key_show_settings_app="false"/>
                 <value type="bool"/>
-            </pref>-->
+            </pref>
             <pref>
                 <value ext_kbd_enabled_2_5d945f40-ded5-11e0-9572-0800200c9a66="false"/>
                 <value type="bool"/>
