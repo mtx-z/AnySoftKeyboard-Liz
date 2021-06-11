@@ -1,8 +1,11 @@
 package com.anysoftkeyboard.ime;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.view.View;
 import com.anysoftkeyboard.api.KeyCodes;
+import com.anysoftkeyboard.base.utils.Logger;
 import com.anysoftkeyboard.keyboards.Keyboard;
 import com.anysoftkeyboard.keyboards.views.AnyKeyboardView;
 import com.anysoftkeyboard.keyboards.views.KeyboardViewContainerView;
@@ -19,6 +22,7 @@ public abstract class AnySoftKeyboardWithQuickText extends AnySoftKeyboardMediaI
     private boolean mDoNotFlipQuickTextKeyAndPopupFunctionality;
     private String mOverrideQuickTextText = "";
     private DefaultSkinTonePrefTracker mDefaultSkinTonePrefTracker;
+
 
     @Override
     public void onCreate() {
@@ -81,6 +85,9 @@ public abstract class AnySoftKeyboardWithQuickText extends AnySoftKeyboardMediaI
     }
 
     private void switchToQuickTextKeyboard() {
+        mEmojiPrefs.edit().putBoolean("isEmojiKeyboardOpen", true).apply();
+        Logger.v("FahadQaziTest", "saving to " + mEmojiPrefs.getBoolean("isEmojiKeyboardOpen", false));
+
         final KeyboardViewContainerView inputViewContainer = getInputViewContainer();
         abortCorrectionAndResetPredictionState(false);
 
@@ -124,6 +131,10 @@ public abstract class AnySoftKeyboardWithQuickText extends AnySoftKeyboardMediaI
         QuickTextPagerView quickTextsLayout =
                 inputViewContainer.findViewById(R.id.quick_text_pager_root);
         if (quickTextsLayout != null) {
+
+            mEmojiPrefs.edit().putBoolean("isEmojiKeyboardOpen", false).apply();
+            Logger.v("FahadQaziTest", "saving to " + mEmojiPrefs.getBoolean("isEmojiKeyboardOpen", false));
+
             inputViewContainer.removeView(quickTextsLayout);
             return true;
         } else {

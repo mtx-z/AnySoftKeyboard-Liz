@@ -1,6 +1,7 @@
 package com.anysoftkeyboard.ime;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.os.SystemClock;
@@ -97,6 +98,9 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
     private boolean mAllowSuggestionsRestart = true;
     private boolean mCurrentlyAllowSuggestionRestart = true;
     private boolean mJustAutoAddedWord = false;
+
+    // DONE: adding a variable for sharedPrefs so that we can know from it that if emoji panel is open
+    SharedPreferences mEmojiPrefs = null;
 
     @VisibleForTesting
     final CancelSuggestionsAction mCancelSuggestionsAction =
@@ -225,6 +229,9 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
                                 },
                                 GenericOnError.onError(
                                         "combineLatest settings_key_show_suggestions")));
+
+        mEmojiPrefs = this.getSharedPreferences(
+                getPackageName(), Context.MODE_PRIVATE);
     }
 
     @Override
@@ -416,6 +423,13 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
                 "onUpdateSelection: word '%s', position %d.",
                 mWord.getTypedWord(),
                 mWord.cursorPosition());
+
+        // DONE: this is where I am closing symbols keyboards
+        Logger.v("FahadQaziTest", isInAlphabetKeyboardMode() + "");
+        if(!isInAlphabetKeyboardMode()) {
+            showAlphabetKeyboard();
+        }
+
         final boolean isExpectedEvent = SystemClock.uptimeMillis() < mExpectingSelectionUpdateBy;
         mExpectingSelectionUpdateBy = NEVER_TIME_STAMP;
 
@@ -852,9 +866,28 @@ public abstract class AnySoftKeyboardSuggestions extends AnySoftKeyboardKeyboard
         }
     }
 
+    // DONE: this is where I am defining the "hide current keyboard and show alphabet keyboard" function
+    private void showAlphabetKeyboard() {
+        View standardKeyboardView = (View) getInputView();
+        if (standardKeyboardView != null) {
+            standardKeyboardView.setVisibility(View.VISIBLE);
+        }
+        getInputViewContainer().removeView(getInputViewContainer().findViewById(R.id.quick_text_pager_root));
+        getKeyboardSwitcher().nextKeyboard(getCurrentInputEditorInfo(), KeyboardSwitcher.NextKeyboardType.Alphabet);
+    }
+
     @Override
     public void onText(Keyboard.Key key, CharSequence text) {
         Logger.d(TAG, "onText: '%s'", text);
+
+        // DONE: this is were I am seeing if emoji panel is open so that I can hide it if they type a character (which would obviously be emoji)
+        Logger.v("FahadQaziTest", mEmojiPrefs.getBoolean("isEmojiKeyboardOpen", false)+"");
+        if (mEmojiPrefs.getBoolean("isEmojiKeyboardOpen", false)) {
+            showAlphabetKeyboard();
+
+            Logger.v("FahadQaziTest", "emojipanelopen, " + " " + text + ", " + ", " + getInputViewContainer() + ", " + getInputView());
+        }
+
         InputConnection ic = getCurrentInputConnection();
         if (ic == null) {
             return;
