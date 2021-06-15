@@ -21,7 +21,7 @@ import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
         switch (v.getId()) {
             case R.id.quick_keys_popup_close:
             case R.id.quick_keys_popup_close_liz:
-            case R.id.quick_keys_popup_close_liz_2:
+            //case R.id.quick_keys_popup_close_liz_2:
                 mKeyboardActionListener.onKey(KeyCodes.CANCEL, null, 0, null, true);
                 break;
             case R.id.quick_keys_popup_backspace:
@@ -58,7 +58,7 @@ import net.evendanan.chauffeur.lib.experiences.TransitionExperiences;
     void registerOnViews(View rootView) {
         rootView.findViewById(R.id.quick_keys_popup_close).setOnClickListener(this);
         rootView.findViewById(R.id.quick_keys_popup_close_liz).setOnClickListener(this);
-        rootView.findViewById(R.id.quick_keys_popup_close_liz_2).setOnClickListener(this);
+        //rootView.findViewById(R.id.quick_keys_popup_close_liz_2).setOnClickListener(this);
         rootView.findViewById(R.id.quick_keys_popup_backspace).setOnClickListener(this);
         //LIZ removed
         /*rootView.findViewById(R.id.quick_keys_popup_quick_keys_settings).setOnClickListener(this);

@@ -43,7 +43,7 @@ public class DebugAnyApplication extends AnyApplication {
     @Override
     public List<Drawable> getInitialWatermarksList() {
         List<Drawable> watermarks = super.getInitialWatermarksList();
-        watermarks.add(ContextCompat.getDrawable(this, R.drawable.ic_watermark_dev_build));
+        //watermarks.add(ContextCompat.getDrawable(this, R.drawable.ic_watermark_dev_build));
 
         return watermarks;
     }

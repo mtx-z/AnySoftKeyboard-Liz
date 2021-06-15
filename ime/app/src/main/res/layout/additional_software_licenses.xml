@@ -12,6 +12,9 @@
         android:paddingLeft="@dimen/global_content_padding_side">
         <TextView
             style="@style/Ask.Legal.Title"
+            android:text="This open-source application has been edited by Liz. Please contact us for more informations."/>
+        <TextView
+            style="@style/Ask.Legal.Title"
             android:text="@string/legal_this_app_uses_android_source_code_title"/>
         <TextView
             style="@style/Ask.Legal.Text"

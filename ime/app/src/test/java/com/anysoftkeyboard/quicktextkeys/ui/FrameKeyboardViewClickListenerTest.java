@@ -32,7 +32,7 @@ public class FrameKeyboardViewClickListenerTest {
         View view = new View(getApplicationContext());
         view.setId(R.id.quick_keys_popup_close);
         view.setId(R.id.quick_keys_popup_close_liz);
-        view.setId(R.id.quick_keys_popup_close_liz_2);
+        //view.setId(R.id.quick_keys_popup_close_liz_2);
         listener.onClick(view);
         Mockito.verify(keyboardActionListener).onKey(KeyCodes.CANCEL, null, 0, null, true);
         Mockito.verifyNoMoreInteractions(keyboardActionListener);
@@ -60,7 +60,7 @@ public class FrameKeyboardViewClickListenerTest {
                 new FrameKeyboardViewClickListener(keyboardActionListener);
         Mockito.verifyZeroInteractions(keyboardActionListener);
         View view = new View(getApplicationContext());
-        view.setId(R.id.quick_keys_popup_quick_keys_insert_media);
+        //view.setId(R.id.quick_keys_popup_quick_keys_insert_media);
         listener.onClick(view);
         Mockito.verify(keyboardActionListener)
                 .onKey(KeyCodes.IMAGE_MEDIA_POPUP, null, 0, null, true);
@@ -75,7 +75,7 @@ public class FrameKeyboardViewClickListenerTest {
                 new FrameKeyboardViewClickListener(keyboardActionListener);
         Mockito.verifyZeroInteractions(keyboardActionListener);
         View view = new View(getApplicationContext());
-        view.setId(R.id.quick_keys_popup_quick_keys_settings);
+        //view.setId(R.id.quick_keys_popup_quick_keys_settings);
         listener.onClick(view);
         Intent expectedIntent =
                 FragmentChauffeurActivity.createStartActivityIntentForAddingFragmentToUi(

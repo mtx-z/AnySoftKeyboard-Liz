@@ -13,8 +13,23 @@ public class VersionChangeLogs {
         log.add(
                 new VersionChangeLog(
                         0,
+                        2,
+                        "liz-android-keyboard",
+                        Uri.parse(
+                                "https://github.com/mtx-z/AnySoftKeyboard-Liz"),
+                        "Close emojis and symbols keyboard on first input.",
+                        "Remove emojis keyboard history tab.",
+                        "Change colors of voice input button.",
+                        "auto import settings at the end of AnySoftKeyboard required initial setup",
+                        "add import button on app home",
+                        "include french keyboard into main APK, removing need for additional APK install.",
+                        "Configurations fixes for Windows build"));
+
+        log.add(
+                new VersionChangeLog(
+                        0,
                         1,
-                        "liz",
+                        "liz-android-keyboard",
                         Uri.parse(
                                 "https://github.com/mtx-z/AnySoftKeyboard-Liz"),
                         "remove access to settings from emoji keyboard right toolbar.",

@@ -90,7 +90,7 @@ public class AnyKeyboardView extends AnyKeyboardViewWithExtraDraw
 
         mWatermarkDimen = getResources().getDimensionPixelOffset(R.dimen.watermark_size);
         mWatermarkMargin = getResources().getDimensionPixelOffset(R.dimen.watermark_margin);
-        mMinimumKeyboardBottomPadding = mWatermarkDimen + mWatermarkMargin;
+        mMinimumKeyboardBottomPadding = 0; //liz edited mWatermarkDimen + mWatermarkMargin
         mExtraBottomOffset = mMinimumKeyboardBottomPadding;
         mGestureDetector =
                 AnyApplication.getDeviceSpecific()

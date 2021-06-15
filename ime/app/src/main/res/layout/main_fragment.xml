@@ -114,7 +114,6 @@
                 android:textSize="@dimen/font_size_sub_title" />
         </androidx.cardview.widget.CardView>
 
-        <!-- LIZ todo: make a link that open the "Restore" settings, same as we clicked in the menu. Not succeeded yet.-->
         <androidx.cardview.widget.CardView
             android:id="@+id/liz_main_fragment_cardview"
             android:layout_width="match_parent"

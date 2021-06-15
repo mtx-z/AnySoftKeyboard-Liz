@@ -34,7 +34,8 @@
         <!-- should support normal, key_type_feedback, action_done, action_done+key_type_feedback, action_search, action_search+key_type_feedback, action_go, action_go+key_type_feedback  -->
         <item name="iconKeyAction">@drawable/yochees_dark_key_action_set</item>
         <!-- should support normal, feedback -->
-        <item name="iconKeyMic">@drawable/yochees_dark_mic_popoup</item>
+        <item name="iconKeyMic">@drawable/liz_smiley_icon_green_civliz</item>
+        <!--<item name="iconKeyMic">@drawable/yochees_dark_mic_popoup</item>-->
         <!-- should support normal, feedback -->
         <item name="iconKeySettings">@drawable/yochees_dark_settings_popup</item>
 
@@ -49,8 +50,8 @@
         <item name="iconKeyClipboardPaste">@drawable/yochees_dark_paste</item>
         <item name="iconKeyClipboardSelect">@drawable/yochees_dark_select_all</item>
         <item name="iconKeyClipboardFineSelect">@drawable/ic_clipboard_fine_select</item>
-        <item name="iconKeyQuickText">@drawable/yochees_dark_smiley</item>
-        <item name="iconKeyQuickTextPopup">@drawable/yochees_dark_smiley</item>
+        <item name="iconKeyQuickText">@drawable/liz_smiley_icon_2</item>
+        <item name="iconKeyQuickTextPopup">@drawable/liz_smiley_icon_2</item>
 
         <item name="iconKeyArrowRight">@drawable/yochees_dark_arrow_right</item>
         <item name="iconKeyArrowLeft">@drawable/yochees_dark_arrow_left</item>

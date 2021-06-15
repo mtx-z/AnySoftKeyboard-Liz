@@ -38,7 +38,7 @@
             </pref>
             <pref>
                 <value type="string"/>
-                <value settings_key_emoticon_default_text=""/>
+                <value settings_key_emoticon_default_text="🙂"/>
             </pref>
             <pref>
                 <value settings_key_layout_for_internet_fields="0a230434-e42a-44e8-b7ae-d937f44cdc6b"/>
@@ -77,7 +77,7 @@
                 <value type="bool"/>
             </pref>
             <pref>
-                <value ext_kbd_enabled_2_82910c70-ded1-11e0-9572-0800200c9a66="false"/>
+                <value ext_kbd_enabled_2_82910c70-ded1-11e0-9572-0800200c9a66="true"/>
                 <value type="bool"/>
             </pref>
             <pref>
@@ -314,7 +314,7 @@
             </pref>
             <pref>
                 <value type="bool"/>
-                <value settings_key_vibrate_on_long_press="true"/>
+                <value settings_key_vibrate_on_long_press="false"/>
             </pref>
             <pref>
                 <value zoom_factor_keys_in_landscape="1.0"/>
@@ -333,7 +333,7 @@
                 <value type="bool"/>
             </pref>
             <pref>
-                <value HistoryQuickTextKey_encoded_history_key="😃,😃,😝,😝,🙃,🙃,🥰,🥰,☺️,☺️,😇,😇,😙,😙,😁,😁,😀,😀,😪,😪,😌,😌,😉,😉,😊,😊,🙂,🙂,😜,😜,"/>
+                <value HistoryQuickTextKey_encoded_history_key="😃,😃,😝,😝,🙃,🙃,🥰,🥰,☺️,☺️,😇,😇,😙,😙,😁,😁,😀,😀,😪,😪,😌,😌,😉,😉,😊,😊,😜,😜,😘,😘,😚,😚,🙂,🙂,"/>
                 <value type="string"/>
             </pref>
             <pref>
@@ -389,7 +389,7 @@
                 <value type="bool"/>
             </pref>
             <pref>
-                <value ext_kbd_enabled_2_d9d6f590-db8b-11e7-8f1a-0800200c9a66="true"/>
+                <value ext_kbd_enabled_2_d9d6f590-db8b-11e7-8f1a-0800200c9a66="false"/>
                 <value type="bool"/>
             </pref>
             <pref>

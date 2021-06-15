@@ -4,7 +4,7 @@
     <string name="debug_tracing_starting_failed">Échec de l\'initialisation du traçage ! Vérifier le journal pour les détails.</string>
     <string name="debug_tracing_finished">Traçage terminé !\nLe fichier de traces est\u0020<xliff:g id="trace_file">%s</xliff:g></string>
     <string name="menu_about_item">À propos</string>
-    <string name="how_to_pointer_title">Bienvenue sur AnySoftKeyboard</string>
+    <string name="how_to_pointer_title">Bienvenue sur LizAndroidKeyboard</string>
     <string name="change_log_card_version_title_template">\u0020\u0020Dernières modifications pour la v<xliff:g id="name">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_entry_header_template_without_name">\u0020\u0020v<xliff:g id="code">%s</xliff:g>\u0020\u0020</string>
     <string name="change_log_url">Plus :\u0020
@@ -338,7 +338,8 @@
     <string name="allow_suggestions_restart_summary">Relancer la suggestion de mots à chaque mouvement du curseur</string>
     <!-- settings - keyboard group -->
     <string name="keyboards_group">Claviers</string>
-    <string name="symbols_keyboard">123!#()</string>
+    <string name="symbols_keyboard">123</string>
+   <!-- <string name="symbols_keyboard">123!#()</string>-->
     <string name="symbols_alt_keyboard">{}\_</string>
     <string name="symbols_alt_num_keyboard">123</string>
     <string name="symbols_phone_keyboard">téléphone</string>

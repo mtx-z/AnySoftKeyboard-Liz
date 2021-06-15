@@ -132,6 +132,7 @@ public class WizardPageDoneAndMoreSettingsFragment extends WizardPageBaseFragmen
             }
 
 
+            //AnySoftKeyboard-Liz\ime\app\src\main\assets\Liz-AnySoftKeyboardPrefs.xml
             inputStream = getContext().getAssets().open("Liz-AnySoftKeyboardPrefs.xml");
             File file = createFileFromInputStream(inputStream);
             GlobalPrefsBackup.updateCustomFilename(file);
