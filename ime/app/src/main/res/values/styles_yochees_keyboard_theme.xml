@@ -34,7 +34,7 @@
         <!-- should support normal, key_type_feedback, action_done, action_done+key_type_feedback, action_search, action_search+key_type_feedback, action_go, action_go+key_type_feedback  -->
         <item name="iconKeyAction">@drawable/yochees_dark_key_action_set</item>
         <!-- should support normal, feedback -->
-        <item name="iconKeyMic">@drawable/liz_smiley_icon_green_civliz</item>
+        <item name="iconKeyMic">@drawable/liz_mic_icon</item>
         <!--<item name="iconKeyMic">@drawable/yochees_dark_mic_popoup</item>-->
         <!-- should support normal, feedback -->
         <item name="iconKeySettings">@drawable/yochees_dark_settings_popup</item>

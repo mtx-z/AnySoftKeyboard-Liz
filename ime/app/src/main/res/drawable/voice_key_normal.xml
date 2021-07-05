@@ -2,7 +2,7 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#2196F3"/>
+            <solid android:color="#27348b"/>
             <corners android:radius="@dimen/yochees_radius_key_corner"/>
         </shape>
     </item>
